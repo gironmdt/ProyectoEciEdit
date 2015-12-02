@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html ng-app="app">
+	<head>
+		
+		<title>ECI Edit</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+        <body ng-controller="JsDocumentos">
+
+		<!-- Header -->
+			<section id="header">
+				<header ng-controller="JsDocumentos">
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Arquitectura de Software</a></h1>
+					<p>Escuela Colombiana de Ingeniera</p>
+				</header>
+				<nav id="nav" ng-controller="JsDocumentos">
+					<ul>
+						<li><a href="#one" class="active">Inicio</a></li>
+                                                <li>
+                                                    <input type="file" id="uploadInput">
+						</li>
+						<li>
+                                                    
+                                                    <button type="button" class="btn btn-warning"  ng-click="updateSize()">
+						    		Editar
+							</button>        
+						</li>
+						<li><a href="#two">Tu Archivo</a></li>
+						<li>
+							<button type="button" class="btn btn-warning"  ng-click="generarArchivo()">
+						    		Descargar
+							</button>  
+                                                                         <a id="downloadlink" style="display: none"></a>
+						</li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper" ng-controller="JsDocumentos">
+
+				<!-- Main -->
+					<div id="main" ng-controller="JsDocumentos">
+
+						<!-- One -->
+							<section id="one">
+								<div class="container" >
+									<header class="major">
+										<h2>Eci Edit</h2>
+										<p>Editor de texto online.</p>
+									</header>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container" ng-controller="JsDocumentos">
+									<h3>Tu texto</h3>
+									 <form>
+                                                                             <textarea id="texto"  rows="100" cols="100"  ng-keyup="setDocumento()">
+										</textarea>
+									    </form>
+								</div>
+							</section>
+
+						
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+                        <script src="js/angular.min.js"></script>
+                        <script src="js/app/controller/JsDocumentos.js"></script>
+                        <script src="js/app/controller/sockjs-0.3.4.js"></script>
+                        <script src="js/app/controller/stomp.js"></script>
+                        
+                        
+			
+
+	</body>
+</html>
